@@ -1,0 +1,13 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1.}Введение}{3}{}%
+\contentsline {section}{\numberline {2.}Описание модели}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Моделирование активных и пассивных волокон}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Чирпированная брегговская волоконная решётка}{7}{}%
+\contentsline {subsection}{\numberline {2.3}Решёточный компрессор}{9}{}%
+\contentsline {subsection}{\numberline {2.4}Оптимизация вычислений}{10}{}%
+\contentsline {section}{\numberline {3.}Результаты}{13}{}%
+\contentsline {subsection}{\numberline {3.1}Моделирование гауссова импульса со спетром усиления Yb3+}{13}{}%
+\contentsline {subsection}{\numberline {3.2}Моделирование гауссова импульса с параболическим спетром усиления}{17}{}%
+\contentsline {subsection}{\numberline {3.3}Моделирование схемы с увеличенной длиной волокна}{19}{}%
+\contentsline {subsection}{\numberline {3.4}Моделирование схемы с укороченными волокнами}{21}{}%
+\contentsline {section}{\numberline {4.}Выводы}{25}{}%

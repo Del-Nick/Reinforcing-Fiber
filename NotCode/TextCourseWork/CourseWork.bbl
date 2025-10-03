@@ -1,0 +1,149 @@
+\begin{thebibliography}{10}
+
+\bibitem{High_Power_Fiber_Lasers:_A_Review}
+Michalis~N. Zervas and Christophe~A. Codemard.
+\newblock High power fiber lasers: A review.
+\newblock {\em IEEE Journal of Selected Topics in Quantum Electronics},
+  20(5):219--241, 2014.
+
+\bibitem{wang2019926}
+Pinghe Wang, Xin Xu, Zhengru Guo, Xingjie Jin, and Guohua Shi.
+\newblock 926 nm yb-doped fiber femtosecond laser system for two-photon
+  microscopy.
+\newblock {\em Applied Physics Express}, 12(3):032008, 2019.
+
+\bibitem{kim2012two}
+Dong~Uk Kim, Hoseong Song, Woosub Song, Hyuk-Sang Kwon, Miae Sung, and
+  Dug~Young Kim.
+\newblock Two-photon microscopy using an yb3+-doped fiber laser with variable
+  pulse widths.
+\newblock {\em Optics express}, 20(11):12341--12349, 2012.
+
+\bibitem{perillo2016deep}
+Evan~P Perillo, Justin~E McCracken, Daniel~C Fern{\'e}e, John~R Goldak, Flor~A
+  Medina, David~R Miller, Hsin-Chih Yeh, and Andrew~K Dunn.
+\newblock Deep in vivo two-photon microscopy with a low cost custom built
+  mode-locked 1060 nm fiber laser.
+\newblock {\em Biomedical optics express}, 7(2):324--334, 2016.
+
+\bibitem{karpf2016two}
+Sebastian Karpf, Matthias Eibl, Benjamin Sauer, Fred Reinholz, Gereon
+  H{\"u}ttmann, and Robert Huber.
+\newblock Two-photon microscopy using fiber-based nanosecond excitation.
+\newblock {\em Biomedical Optics Express}, 7(7):2432--2440, 2016.
+
+\bibitem{toda2017temporal}
+Keisuke Toda, Keisuke Isobe, Kana Namiki, Hiroyuki Kawano, Atsushi Miyawaki,
+  and Katsumi Midorikawa.
+\newblock Temporal focusing microscopy using three-photon excitation
+  fluorescence with a 92-fs yb-fiber chirped pulse amplifier.
+\newblock {\em Biomedical Optics Express}, 8(6):2796--2806, 2017.
+
+\bibitem{moritomo2020multi}
+H~Moritomo, S~Onishi, Y~Makino, K~Matsumoto, Y~Suzuki, and J~Kawamata.
+\newblock Multi-photon fluorescence microscopy imaging of mitochondria in
+  living cells excited by yb-doped femtosecond fiber laser utilizing two-and
+  three-photon competitive absorption.
+\newblock {\em AIP Advances}, 10(9), 2020.
+
+\bibitem{klioutchnikov2023three}
+Alexandr Klioutchnikov, Damian~J Wallace, Juergen Sawinski, Kay-Michael Voit,
+  Yvonne Groemping, and Jason~ND Kerr.
+\newblock A three-photon head-mounted microscope for imaging all layers of
+  visual cortex in freely moving mice.
+\newblock {\em Nature methods}, 20(4):610--616, 2023.
+
+\bibitem{horton2013vivo}
+Nicholas~G Horton, Ke~Wang, Demirhan Kobat, Catharine~G Clark, Frank~W Wise,
+  Chris~B Schaffer, and Chris Xu.
+\newblock In vivo three-photon microscopy of subcortical structures within an
+  intact mouse brain.
+\newblock {\em Nature photonics}, 7(3):205--209, 2013.
+
+\bibitem{zipfel2003nonlinear}
+Warren~R Zipfel, Rebecca~M Williams, and Watt~W Webb.
+\newblock Nonlinear magic: multiphoton microscopy in the biosciences.
+\newblock {\em Nature biotechnology}, 21(11):1369--1377, 2003.
+
+\bibitem{dudley2006supercontinuum}
+John~M Dudley, Go{\"e}ry Genty, and St{\'e}phane Coen.
+\newblock Supercontinuum generation in photonic crystal fiber.
+\newblock {\em Reviews of modern physics}, 78(4):1135--1184, 2006.
+
+\bibitem{grelu2012dissipative}
+Philippe Grelu and Nail Akhmediev.
+\newblock Dissipative solitons for mode-locked lasers.
+\newblock {\em Nature photonics}, 6(2):84--92, 2012.
+
+\bibitem{grelu2024solitary}
+Philippe Grelu.
+\newblock Solitary waves in ultrafast fiber lasers: From solitons to
+  dissipative solitons.
+\newblock {\em Optics Communications}, 552:130035, 2024.
+
+\bibitem{han2021spectral}
+Mengmeng Han, Yueqing Du, Peiyun Cheng, and Xuewen Shu.
+\newblock Spectral evolution in fiber lasers with soliton self-frequency shift
+  effect.
+\newblock {\em IEEE Photonics Journal}, 13(2):1--11, 2021.
+
+\bibitem{gaida2015self}
+C~Gaida, M~Gebhardt, F~Stutzki, C~Jauregui, J~Limpert, and A~T{\"u}nnermann.
+\newblock Self-compression in a solid fiber to 24 mw peak power with few-cycle
+  pulses at 2 $\mu$m wavelength.
+\newblock {\em Optics letters}, 40(22):5160--5163, 2015.
+
+\bibitem{giree2015high}
+Achut Giree, Florent Guichard, Yoann Zaouter, Marc Hanna, Guillaume Machinet,
+  Benoit Debord, Frederic Gerome, Pascal Dupriez, Clemens H{\"o}nninger, Eric
+  Mottay, et~al.
+\newblock High-energy, 34 fs, fiber source via nonlinear compression in
+  hypocycloid-core kagome fiber.
+\newblock In {\em 2015 Conference on Lasers and Electro-Optics (CLEO)}, pages
+  1--2. IEEE, 2015.
+
+\bibitem{zhang2013sub}
+Zuxing Zhang, {\c{C}}~{\c{S}}enel, R~Hamid, and F{\"O}~Ilday.
+\newblock Sub-50 fs yb-doped laser with anomalous-dispersion photonic crystal
+  fiber.
+\newblock {\em Optics letters}, 38(6):956--958, 2013.
+
+\bibitem{kurita2011dispersion}
+Takashi Kurita, Hidetsugu Yoshida, Hiroaki Furuse, Toshiyuki Kawashima, and
+  Noriaki Miyanaga.
+\newblock Dispersion compensation in an yb-doped fiber oscillator for
+  generating transform-limited, wing-free pulses.
+\newblock {\em Optics Express}, 19(25):25199--25205, 2011.
+
+\bibitem{hou2018sub}
+Lei Hou, Hongyu Guo, Yonggang Wang, Jiang Sun, Qimeng Lin, Yang Bai, and Jintao
+  Bai.
+\newblock Sub-200 femtosecond dispersion-managed soliton ytterbium-doped fiber
+  laser based on carbon nanotubes saturable absorber.
+\newblock {\em Optics express}, 26(7):9063--9070, 2018.
+
+\bibitem{tavella2010fiber}
+F~Tavella, A~Willner, J~Rothhardt, S~H{\"a}drich, E~Seise, S~D{\"u}sterer,
+  T~Tschentscher, H~Schlarb, J~Feldhaus, J~Limpert, et~al.
+\newblock Fiber-amplifier pumped high average power few-cycle pulse
+  non-collinear opcpa.
+\newblock {\em Optics express}, 18(5):4689--4694, 2010.
+
+\bibitem{ludlow2015optical}
+Andrew~D Ludlow, Martin~M Boyd, Jun Ye, Ekkehard Peik, and Piet~O Schmidt.
+\newblock Optical atomic clocks.
+\newblock {\em Reviews of Modern Physics}, 87(2):637--701, 2015.
+
+\bibitem{eidam2010fiber}
+Tino Eidam, Jan Rothhardt, Fabian Stutzki, Florian Jansen, Steffen H{\"a}drich,
+  Henning Carstens, Cesar Jauregui, Jens Limpert, and Andreas T{\"u}nnermann.
+\newblock Fiber chirped-pulse amplification system emitting 3.8 gw peak power.
+\newblock {\em Optics express}, 19(1):255--260, 2010.
+
+\bibitem{wollenhaupt2007femtosecond}
+Matthias Wollenhaupt, Andreas Assion, and Thomas Baumert.
+\newblock Femtosecond laser pulses: linear properties, manipulation, generation
+  and measurement.
+\newblock {\em Springer Handbook of Lasers and Optics}, page 937, 2007.
+
+\end{thebibliography}
