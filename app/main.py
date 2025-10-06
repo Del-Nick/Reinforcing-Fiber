@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 from app.config.grid import Grid
 from app.graphs.cpu_builder import LiveFourGraphPlotter
-from app.sim_steps import FiberProcess, CompressorPrecess, BFGProcess, StateSaver, ChangeGrid, Pipeline, AOMProcess
+from app.sim_steps import FiberProcess, CompressorProcess, BFGProcess, StateSaver, ChangeGrid, Pipeline, AOMProcess
 from app.field import Field
 
 BASE = Path(__file__).parent.parent
@@ -19,7 +19,7 @@ first_element = 1
 last_element = 24
 
 
-E = Field(Nt=2**16, time_window=50e-11,
+E = Field(Nt=2**16, time_window=5e-10,
           osc_filepath=BASE / 'Параметры элементов' / 'oscillator.dat' if 'Experimental' in MODE else None,
           backend='gpu')
 
@@ -35,7 +35,7 @@ pipeline = [
     # Брэгговская решётка
     ChangeGrid(num=4, Nt=2**22, time_window=1e-8),
     BFGProcess(num=4, name='BFG'),
-    CompressorPrecess(num=4),
+    CompressorProcess(num=4),
     ChangeGrid(num=4, Nt=2**18, time_window=6e-9),
 
     FiberProcess(num=5, length=0.9, diameter=6, gain=False),
@@ -45,7 +45,7 @@ pipeline = [
     # ПЕРВЫЙ КАСКАД
     FiberProcess(num=8, name='Yb3+ 6_125', length=.9, diameter=6, gain=True, g_0=30, W_s=8.2e-10,
                  gain_profile_path=BASE / 'Параметры элементов' / 'Спектр усиления Yb3+.dat'),
-    CompressorPrecess(num=8),
+    CompressorProcess(num=8),
     FiberProcess(num=9, length=0.9, diameter=6, gain=False),
     FiberProcess(num=10, length=1.9, diameter=6, gain=False),
 
@@ -57,7 +57,7 @@ pipeline = [
     # ВТОРОЙ КАСКАД
     FiberProcess(num=14, name='Yb3+ 6_125', length=0.8, diameter=6, gain=True, g_0=46, W_s=1e-8, gain_norm_coef=1,
                  gain_profile_path=BASE / 'Параметры элементов' / 'Спектр усиления Yb3+.dat'),
-    CompressorPrecess(num=14),
+    CompressorProcess(num=14),
     FiberProcess(num=15, length=0.25, diameter=6, gain=False),
     FiberProcess(num=16, length=0.45, diameter=6, gain=False, field_scale_factor=E.xp.sqrt(20/22)),
     FiberProcess(num=17, length=0.35, diameter=6, gain=False, field_scale_factor=E.xp.sqrt(17/20)),
@@ -67,10 +67,13 @@ pipeline = [
     FiberProcess(num=20, length=0.32, diameter=25, gain=False),
 
     # ТРЕТИЙ КАСКАД
-    FiberProcess(num=21, name='Yb3+ 25_250', length=2, diameter=25, gain=True, g_0=45, W_s=1.7e-7,
+    # FiberProcess(num=21, name='Yb3+ 25_250', length=2, diameter=25, gain=True, g_0=45, W_s=1.7e-7,
+    #              gain_profile_path=BASE / 'Параметры элементов' / 'Спектр усиления Yb3+.dat'),
+    FiberProcess(num=21, name='Yb3+ 25_250', length=2, diameter=25, gain=True, g_0=45, W_s=3.6e-7,
                  gain_profile_path=BASE / 'Параметры элементов' / 'Спектр усиления Yb3+.dat'),
     ChangeGrid(num=22, Nt=2**22, time_window=5e-9),
-    CompressorPrecess(num=22),
+    CompressorProcess(num=22),
+    ChangeGrid(num=22, Nt=2**16, time_window=5e-10),
 ]
 
 runner = Pipeline(steps=pipeline, saver=state_saver, plotter=plotter)

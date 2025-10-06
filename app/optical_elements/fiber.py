@@ -167,4 +167,4 @@ class Fiber:
         gain_profile = f(grid_lam)
         gain_profile = np.sign(gain_profile) * np.abs(gain_profile) ** norm_coef
         gain_profile /= gain_profile.max()
-        self.gain_profile = xp.asarray(gain_profile) ** 0
+        self.gain_profile = xp.asarray(gain_profile)

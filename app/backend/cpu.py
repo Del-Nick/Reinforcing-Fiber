@@ -33,7 +33,7 @@ class CPUBackend:
         _, inv = self._get_plans(a)
         inv.input_array[...] = a
         y = inv()
-        return y / a.shape[-1]
+        return y
 
     def fftfreq(self, n: int, d: float):
         """

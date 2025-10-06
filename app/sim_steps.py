@@ -96,7 +96,7 @@ class ChangeGrid(Step):
         self.time_window = time_window
 
     def process(self, E: 'Field') -> 'Field':
-        E.change_grid(Nt=self.Nt, time_window=self.time_window)  # реализовано в Field
+        E.change_grid(Nt=self.Nt, time_window=self.time_window)
         return E
 
 
@@ -144,13 +144,15 @@ class FiberProcess(Step):
         return E
 
 
-class CompressorPrecess(Step):
-    def __init__(self, num: int, name: str = 'compressed'):
+class CompressorProcess(Step):
+    def __init__(self, num: int, name: str = 'compressed', gamma: Optional[float] = None, l_g: Optional[float] = None):
         super().__init__(num=num, name=f'{num}. {name}' if name else f'{num}')
         self.compressor = Compressor()
+        self.gamma = gamma
+        self.l_g = l_g
 
     def process(self, E: 'Field') -> 'Field':
-        E.Ez, *_ = self.compressor.compress_it(E)
+        E.Ez = self.compressor.compress_it(E, gamma=self.gamma, l_g=self.l_g)
         return E
 
 
@@ -205,21 +207,23 @@ class Pipeline:
             if self.plotter:
                 self.plotter.update(E=E, num=step.num, title=step.name)
 
-            if type(step) is CompressorPrecess:
+            if type(step) is CompressorProcess and step.num < 22:
                 Ez_old = E.Ez.copy()
 
             E = step.process(E)
             if self.plotter:
                 self.plotter.update(E, step.num)
-                self.plotter.finalize(step.name)
+                self.plotter.finalize(filename=step.name, num=step.num, energy=E.energy if step.num > 20 else None)
 
-            if type(step) is CompressorPrecess:
+            if type(step) is CompressorProcess and step.num < 22:
                 E.Ez = Ez_old.copy()
 
             E.Ez0 = E.Ez.copy()
 
             if autosave and self.saver:
-                # на случай если шаг сам не сохранил (например, какой-то "быстрый" шаг)
-                self.saver.save_state(E, filename=f'{step.num:02d}')
+                if step.num > 20:
+                    self.saver.save_state(E, filename=f'{step.num:02d} E={E.energy:.2f} nJ')
+                else:
+                    self.saver.save_state(E, filename=f'{step.num:02d}')
 
         return E

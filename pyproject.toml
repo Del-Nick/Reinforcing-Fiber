@@ -1,0 +1,7 @@
+[project]
+name = "reinforcing-fiber"
+version = "0.1.0"
+description = "Fiber Pulse Simulation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []

@@ -69,7 +69,7 @@ def prepare_arrays(E: 'Field', num: int):
 
     time_left, time_right = E.time_borders_FWHN
     step = max((time_right - time_left) // DEFAULT_MAX_POINTS, 1)
-    time_sl = _get_slice(left=time_left, right=time_right, range_k=2, step=step)
+    time_sl = _get_slice(left=time_left, right=time_right, range_k=4, step=step)
 
     lam_left, lam_right = E.spectrum_borders_FWHM
     step = max(abs(time_right - time_left) // DEFAULT_MAX_POINTS, 1)
@@ -246,7 +246,7 @@ class LiveFourGraphPlotter:
 
         self._set_line(self.lines_pulse[0], arrays.t, arrays.I)
         self._set_line(self.lines_pulse[1], arrays.t, arrays.I_prev)
-        self.ax_pulse.set_yscale('log')
+        # self.ax_pulse.set_yscale('log')
         self.ax_pulse.relim()
         self.ax_pulse.autoscale_view()
         self.ax_pulse.set_ylim(0.9 * arrays.I.min(), arrays.I.max() * 1.1)
@@ -272,7 +272,7 @@ class LiveFourGraphPlotter:
         self._set_line(self.lines_psd[2], arrays.experiment_x, arrays.experiment_y)
         if E.fiber.gain and arrays.gain_profile.size > 0:
             self._set_line(self.lines_psd[3], arrays.lam, arrays.gain_profile * arrays.PSD.max(),)
-        self.ax_psd.set_yscale('log')
+        # self.ax_psd.set_yscale('log')
         self.ax_psd.relim()
         self.ax_psd.autoscale_view(scaley=False)
         self.ax_psd.set_ylim(0.9 * arrays.PSD.min(), arrays.PSD.max() * 1.1)
@@ -292,14 +292,17 @@ class LiveFourGraphPlotter:
         self.fig.canvas.flush_events()
         plt.pause(0.001)
 
-    def finalize(self, filename: str):
+    def finalize(self, filename: str, num: int = None, energy: float = None):
         """Завершить live и дать полноценное интерактивное окно (zoom/pan)."""
         self._ensure_alive()
         plt.ioff()
         self.fig.canvas.draw()
-        plt.savefig(self.base_path / f'{filename}.png', dpi=300)
+        if num > 20:
+            plt.savefig(self.base_path / f'{filename} E={energy:.2f} nJ.png', dpi=300)
+        else:
+            plt.savefig(self.base_path / f'{filename}.png', dpi=300)
         # plt.show(block=True)
-        plt.close(self.fig)
+        # plt.close(self.fig)
         plt.ion()
 
     def plot_gain_history(self, z, energy_nJ, filename: str = "gain.png",

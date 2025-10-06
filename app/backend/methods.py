@@ -85,6 +85,7 @@ class Methods:
             if z >= E.fiber.length:
                 break
 
+        pbar.close()
         E.plot.update(E=E, num=num)
 
         # if gain:
