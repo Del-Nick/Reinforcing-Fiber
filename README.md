@@ -59,15 +59,15 @@ $\hat{g}(\omega)E(z,t)$ — усиление внутри иттербиевог
 ### Решёточный компрессор
 
 Фаза компрессора $\phi_c(\omega; \gamma, L)$ развёрнута в ряд до 5-го порядка,
-$$
-\phi_c(\omega) \approx \frac{\beta_2(\gamma,L)}{2}\omega^2 + \frac{\beta_3(\gamma,L)}{6}\omega^3 + \frac{\beta_4}{24}\omega^4 + \frac{\beta_5}{120}\omega^5,
-$$
+
+$\phi_c(\omega) \approx \frac{\beta_2(\gamma,L)}{2}\omega^2 + \frac{\beta_3(\gamma,L)}{6}\omega^3 + \frac{\beta_4}{24}\omega^4 + \frac{\beta_5}{120}\omega^5,$
+
+
 где $\beta_m$ аналитически выведены из геометрии пары решёток (угол $\gamma$, базовая длина $L$, период $d$).
 
 **Целевая функция оптимизации** — минимизация остаточной спектральной фазы в полосе спектра:
-$$
-J(\gamma,L)=\sum_{\omega \in \Omega}\Big(\phi_{\text{pulse}}(\omega)-\phi_c(\omega;\gamma,L)\Big)^2,
-$$
+
+$J(\gamma,L)=\sum_{\omega \in \Omega}\Big(\phi_{\text{pulse}}(\omega)-\phi_c(\omega;\gamma,L)\Big)^2,$
 
 Глобальный поиск **Differential Evolution** (латинский гиперкуб, стратегия `currenttobest1bin`), затем локальный **L-BFGS-B** на сузившихся границах.
 
